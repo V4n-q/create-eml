@@ -26,8 +26,6 @@ def addAttachment(msg):
     It then asks for the file/folder path and iterates through each file in the folder to add it as an attachment.
     If there are any errors (e.g. file not found, permission denied), it logs the error and continues with the next file.
     """
-    # configure logging settings
-    logging.basicConfig(filename="attachment.log",level=logging.ERROR, format='%(asctime)s %(levelname)s: %(message)s')
     # attachment mode
     print("1.Single File\n2.Multiple File")
     attachMode = int(input("Choose 1 or 2: "))
@@ -93,6 +91,9 @@ def addAttachment(msg):
         print("Invalid Input. Please enter '1' or '2'.")
 
 if __name__=="__main__":
+    # configure logging settings
+    logging.basicConfig(filename="attachment.log",level=logging.ERROR, format='%(asctime)s %(levelname)s: %(message)s')
+    
     attachmentConfirmation = ["y","n","yes","no"]
     attachmentPositiveConfirm= ["y","yes"]
     
