@@ -28,10 +28,15 @@ def addAttachment(msg):
     """
     # attachment mode
     print("1.Single File\n2.Multiple File")
-    attachMode = int(input("Choose 1 or 2: "))
-    # validating user input
-    while(attachMode not in (1,2)):
-        attachMode = input("Invalid input. Choose 1 or 2: ")
+    while True:
+        try:
+            attachMode = int(input("Choose 1 or 2: "))
+            # validating user input
+            if attachMode in (1,2):
+                break
+        except ValueError:
+            pass
+        print("Invalid Input.")
     # Single File Mode
     if attachMode == 1:
         filePath = input("File Path: ").strip('"')
