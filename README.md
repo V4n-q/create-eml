@@ -12,19 +12,25 @@ All of the imported modules are preinstalled.
 
 - `py main.py "SenderEmail" "ReceiverEmail" "Subject"`
 
+  Enter Message Body and Choose if you wanna attach any files or not when prompted.
+
 <center>Or,</center>
 
 - `py main.py`
+
   Enter Sender Email, Receiver Email, Subject & Message Body in order when prompted.
   And Choose if you wanna attach any files or not.
 
 ## Attachment Type:
 
 1) Single Mode
-   Choose 1 for Single File, and provide the file path.
+   Choose `1` for Single File, and provide the file path.
    Should Support any type of file.
+   
    Example: `D:\Files\TestDoc.pdf`
-3) Multi Mode
-   Choose 2 For Multiple Files, and provide the folder path where all the files are located.
+   
+2) Multi Mode
+   Choose `2` For Multiple Files, and provide the folder path where all the files are located.
    Will work for sub directories too.
+   
    Example: `D:\Files\`
