@@ -48,7 +48,8 @@ def addAttachment(msg):
             with open(filePath, 'rb') as f:
                 fileData = f.read()
                 fileName= os.path.basename(filePath)
-                fileExtension= os.path.splitext(fileName)[1]
+                # Gets File extension and removes dot from the extension
+                fileExtension= os.path.splitext(fileName)[1].strip(".")
             # add file data as attachment to message
             msg.add_attachment(fileData,maintype='application',subtype=fileExtension,filename=fileName)
         except (FileNotFoundError, PermissionError) as e:
